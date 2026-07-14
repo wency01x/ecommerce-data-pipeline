@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  pgdatabase:
+    image: postgres:13
+    container_name: pgdatabase
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=database
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - ecommerce_net
+    
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=wencygwapo@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=wencygwapo123
+    ports:
+      - "8080:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - ecommerce_net
+    depends_on:
+      - pgdatabase
+
+volumes:
+  pgdata:
+  pgadmin_data:
+
+networks:
+  ecommerce_net:
