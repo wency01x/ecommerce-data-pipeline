@@ -1,7 +1,10 @@
 # E-Commerce Data Ingestion Pipeline
 
-This project is a simulation that demonstrates a complete data ingestion pipeline for an e-commerce platform. It is designed to process large datasets efficiently without overwhelming system memory by utilizing data chunking techniques.
+A containerized Data Engineering ETL pipeline that extracts, cleans, and loads massive E-Commerce datasets into a PostgreSQL Data Warehouse. 
 
-The underlying infrastructure is deployed using Docker Compose, which automatically spins up an isolated PostgreSQL database and a pgAdmin web interface for seamless database administration. 
-
-The core of the pipeline is a Python script running inside its own custom Docker container. This script reads the raw data, connects to the PostgreSQL database across a dedicated Docker network, and ingests the data in chunks of 100,000 rows at a time. The pipeline is designed to be portable and flexible, using argument parsing to dynamically accept database credentials and file paths directly from the command line.
+### Core Features:
+*   **Memory-Efficient Extraction:** Uses Python and Pandas to ingest 500,000+ rows of raw data in chunks of 100,000, preventing memory crashes.
+*   **Data Quality Transformations:** Implements automated data cleaning to filter out corrupted or missing customer records before ingestion.
+*   **Containerized Infrastructure:** Utilizes Docker Compose to spin up an isolated PostgreSQL database and pgAdmin network, while the ingestion script runs in its own custom Docker image.
+*   **Infrastructure as Code (IaC):** Includes Terraform configuration (`main.tf`) architected to deploy a Google Cloud Storage Data Lake and BigQuery Data Warehouse optimized for Southeast Asia network latency.
+*   **Automated Execution:** Fully automated via a single `./run.sh` shell script.
