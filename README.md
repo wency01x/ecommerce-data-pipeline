@@ -1,4 +1,4 @@
-# ☁️ Cloud-Native Ecommerce Data Pipeline
+# Cloud-Native Ecommerce Data Pipeline
 
 ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
