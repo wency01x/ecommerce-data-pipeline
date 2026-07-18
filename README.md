@@ -6,10 +6,11 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 
-## Project Overview
+## 📌 Project Overview
 A professional, cloud-native **ELT (Extract, Load, Transform)** data pipeline that ingests over 1 million rows of raw ecommerce sales data directly into Google Cloud. 
 
-This project demonstrates modern Data Engineering principles by abandoning local databases (like PostgreSQL) in favor of infinitely scalable, managed cloud infrastructure.
+**Evolution of the Pipeline:**
+This project originated as a traditional local ETL pipeline (using Docker-Compose, PostgreSQL, and pgAdmin). To demonstrate modern Data Engineering scalability, it was successfully migrated to a **fully Cloud-Native architecture**. By abandoning the local PostgreSQL database in favor of Google Cloud Storage (Data Lake) and BigQuery (Data Warehouse), this pipeline now leverages infinitely scalable, managed cloud infrastructure.
 
 ## Architecture & Workflow
 
