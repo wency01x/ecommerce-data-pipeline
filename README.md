@@ -6,7 +6,7 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 
-## 📌 Project Overview
+## Project Overview
 A professional, cloud-native **ELT (Extract, Load, Transform)** data pipeline that ingests over 1 million rows of raw ecommerce sales data directly into Google Cloud. 
 
 **Evolution of the Pipeline:**
