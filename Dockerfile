@@ -1,6 +1,6 @@
-FROM python:3.9-slim
+FROM python:3.11-slim
 
-RUN pip install sqlalchemy pandas psycopg2-binary
+RUN pip install pandas pandas-gbq db-dtypes
 
 WORKDIR /app
 
